@@ -14,13 +14,13 @@
 
 class Holder {
 
-    constructor(holderType, chasisNumber, holderName, domainName, nextReviewDate, holderState) {
+    constructor(holderType, chasisNumber, holderName, domainName, nextReviewDate, holderStatus) {
         this.holderType = holderType;
         this.chasisNumber = chasisNumber;
         this.holderName = holderName;
         this.domainName = domainName;
         this.nextReviewDate = nextReviewDate;
-        this.holderState = holderState;
+        this.holderStatus = holderStatus;
     }
     // :::::: GETTER AND SETTER :::::: \\
 
@@ -64,12 +64,12 @@ class Holder {
         this.nextReviewDate = nextReviewDate;
     }
 
-    getHolderState() {
-        return this.holderState;
+    getHolderStatus() {
+        return this.holderStatus;
     }
 
-    setHolderState(holderState) {
-        this.holderState = holderState;
+    setHolderStatus(holderStatus) {
+        this.holderStatus = holderStatus;
     }
 
 
