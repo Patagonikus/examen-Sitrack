@@ -12,6 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <title>Holders Sitrack</title>
+
 </head>
 
 <body>
@@ -27,7 +28,8 @@
                     <th>Holder Name</th>
                     <th>Domain Name</th>
                     <th>Next Review Date</th>
-                    <th>State</th>
+                    <th>Status</th>
+                    <th>Check On</th>
                 </tr>
             </thead>
             <tbody id="holders_body">
@@ -35,7 +37,6 @@
             </tbody>
         </table>
     </div>
-
     <div>
         <!-- <form action="post"> -->
 
@@ -86,8 +87,8 @@
                     <input class="form-control"type="date" name="nextReviewDate" id="nextReviewDate">
                 </div> -->
                 <div class="form-group mb-3">
-                    <label class="control-label" for="state">State</label>
-                    <input class="form-control" type="number" name="state" value="1" disabled id="state">
+                    <label class="control-label" for="status">Status</label>
+                    <input class="form-control" type="number" name="status" value="1" disabled id="status">
                 </div>
     
                 <button type="button" class="btn btn-outline-success btn-block" onclick="addHolder()" data-dismiss="modal">Cargar</button>
@@ -102,9 +103,9 @@
         </div>
       </div>
     
-    <script src="./js/scripts.js"></script>
-    <script src="./js/holder.js"></script>
-    <script src="./js/date.js"></script>
+      <script src="./js/holder.js"></script>
+      <script src="./js/scripts.js"></script>
+    
 </body>
 
 </html>
