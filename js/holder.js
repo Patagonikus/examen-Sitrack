@@ -12,8 +12,6 @@ class Holder {
         this.holderStatus = holderStatus;
     }
 
-
-
 }
 
 

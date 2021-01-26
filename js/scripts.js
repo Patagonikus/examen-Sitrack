@@ -10,6 +10,7 @@ arrHolders.push(new Holder("Barco", 1234, "Camión 2", "ab123cd", "21", 1), new 
 f = new Date();
 var day = f.getDate();
 
+// :::::: cargar datos en tabla :::::: \\
 
 function loadTableData(arrHolders/*[{holde},{holde},{holde},....]*/) {
     var table = document.getElementById("holders_table"),
@@ -44,13 +45,15 @@ function loadTableData(arrHolders/*[{holde},{holde},{holde},....]*/) {
         element.onclick = function (evt) {
             debugger
             // alert("hola boton");
-            evt.toElement.parentElement.parentElement.children[5].innerHTML = "0";
-            arrHolders[evt.toElement.id*1].holderStatus = 0;
-            evt.toElement.disabled = true;
+            evt.target.parentElement.parentElement.children[5].innerHTML = "0";
+            arrHolders[evt.target.id*1].holderStatus = 0;
+            evt.target.disabled = true;
         }
 
     }
 }
+
+// :::::: crear nuevo Holder :::::: \\
 
 function addHolder() {
     var table = document.getElementById("holders_table");
@@ -70,15 +73,18 @@ function addHolder() {
     // alert(arrHolders.length + " elementos en el array");
 }
 
+// :::::: generar fecha aleatoria :::::: \\
+
 function randomDate(from, to) {
     return Math.round((Math.random() * (to - from) + from));
 
 }
 
+// :::::: controlar fecha verificación vencida :::::: \\
+
 function checkOn(hReviewDate, index, status) { //recibe la fecha del review del holder
     //compara fechas actual con parámetro
     if (day > hReviewDate && status >0) {
-        //buttonegar botón chbuttonkon
         return `<button class="btn btn-warning align-middle" id="${index}">Check ON</button>`;
     }
     else {
@@ -86,15 +92,15 @@ function checkOn(hReviewDate, index, status) { //recibe la fecha del review del 
     }
 }
 
-// function changeStatus(status) {
-//     if (status = 1) {
-//         // status = 0;
-//         alert("se cambió a 0");
-//     } else {
-//         // status = 1;
-//         alert("se cambió a 1");
-//     }
+function changeStatus(status) {
+    if (status = 1) {
+        // status = 0;
+        alert("se cambió a 0");
+    } else {
+        // status = 1;
+        alert("se cambió a 1");
+    }
 
-// }
+}
 
 
